@@ -4,8 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Element</title>
+
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+      <div class="grid mx-auto w-[90%] gap-6 grid-cols-4">
+        <!-- Triangal -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/triangle.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Triangal</h2>
+              <p>Area = 0.5 * b * h</p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="b" id="triangal-base"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="h" name="" id="triangal-hight"><span>cm</span>
+              </div>
+              <p>area: <span id="trArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="grtTryangal()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+        <!-- rectangle -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/rectangle.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Rectangle</h2>
+              <p>Area = W * L</p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="W" id="rectangle-width"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="L" name="" id="rectangle-length"><span>cm</span>
+              </div>
+              <p>area: <span id="recArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="getRectangle()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+        <!-- Parallelogram -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/parallelogram.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Parallelogram</h2>
+              <p>Area = B * H</p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="B" id="parallelogram-base"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="H" name="" id="parallelogram-hight"><span>cm</span>
+              </div>
+              <p>area: <span id="paraArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="getParallelogram()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <h1 class="text-center text-3xl underline font-bold mt-7">Area Collection</h1>
+          </div>
+
+          <!-- Rombos -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/rhombus.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Rhombus</h2>
+              <p>Area = 0.5 * b<sub>1</sub> * b<sub>2</sub> </p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="b1" id="rhombus-base"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="b2" name="" id="rhombus-hight"><span>cm</span>
+              </div>
+              <p>area: <span id="romArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="getRhombus()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/pentagon.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Pentagon</h2>
+              <p>Area = 0.5 * p * b </p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="p" id="pentagon-base"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="b" name="" id="pentagon-pos"><span>cm</span>
+              </div>
+              <p>area: <span id="panArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="getPentagon()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse -->
+        <div class="card w-72 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/ellipse.png" alt="Shoes" class="rounded-xl h-32" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Ellipse</h2>
+              <p>Area = ab</p>
+              <div>
+                <input type="number" class="w-16 border-2 rounded-md outline-none" name="" placeholder="a" id="ellipse-base"><span>cm</span>
+                <input type="number" class="w-16 border-2 outline-none rounded-md "placeholder="b" name="" id="ellipse-hight"><span>cm</span>
+              </div>
+              <p>area: <span id="ellArea">00</span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button onclick="getEllipse()" class="btn btn-primary">Cheak area</button>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <script src="/js/main.js"></script>
 </body>
 </html>
